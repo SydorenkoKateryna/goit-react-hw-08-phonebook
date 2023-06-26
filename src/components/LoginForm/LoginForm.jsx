@@ -1,35 +1,37 @@
-// import { useDispatch } from 'react-redux';
-// import { logIn } from 'redux/auth/operations';
-// import { Form, Label } from './LoginForm.styled';
+import { useDispatch } from 'react-redux';
+import { logIn } from 'store/auth/operations';
+import { Form, Label } from './LoginForm.styled';
 
 const LoginForm = () => {
-//   const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  //   const handleSubmit = e => {
-  //     e.preventDefault();
-  //     const form = e.currentTarget;
-  //     dispatch(
-  //       logIn({
-  //         email: form.elements.email.value,
-  //         password: form.elements.password.value,
-  //       })
-  //     );
-  //     form.reset();
-  //   };
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+
+    dispatch(
+      logIn({
+        email: form.elements.email.value,
+        password: form.elements.password.value,
+      })
+    );
+    
+    form.reset();
+  };
 
   return (
-    <h2>LoginForm</h2>
-    // <Form onSubmit={handleSubmit} autoComplete="off">
-    //   <Label>
-    //     Email
-    //     <input type="email" name="email" />
-    //   </Label>
-    //   <Label>
-    //     Password
-    //     <input type="password" name="password" />
-    //   </Label>
-    //   <button type="submit">Log In</button>
-    // </Form>
+    <Form onSubmit={handleSubmit} autoComplete="off">
+      <Label>
+        Email
+        <input type="email" name="email" required />
+      </Label>
+      <Label>
+        Password
+        <input type="password" name="password" required />
+      </Label>
+      <button type="submit">Log In</button>
+    </Form>
   );
 };
 

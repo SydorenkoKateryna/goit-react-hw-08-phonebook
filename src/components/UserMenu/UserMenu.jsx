@@ -1,22 +1,21 @@
-// import { useDispatch } from 'react-redux';
-// import { logOut } from 'redux/auth/operations';
-// import {
-//     selectUser
-//   } from 'redux/auth/selectors';
-// import { Wrapper, Username, Button} from "./UserMenu.styled";
-import { Wrapper } from "./UserMenu.styled";
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
+import { logOut } from 'store/auth/operations';
+import {
+    selectUser
+  } from 'store/auth/selectors';
+import { Wrapper, Username, Button} from "./UserMenu.styled";
 
 const UserMenu = () => {
-//   const dispatch = useDispatch();
-//   const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+  const user = useSelector(selectUser);
 
   return (
     <Wrapper>
-      {/* <Username>Welcome, {user.name}</Username>
+      <Username>Welcome, {user.name}</Username>
       <Button type="button" onClick={() => dispatch(logOut())}>
-        Logout
-      </Button> */}
-      Welcome
+        Log out
+      </Button>
     </Wrapper>
   );
 };

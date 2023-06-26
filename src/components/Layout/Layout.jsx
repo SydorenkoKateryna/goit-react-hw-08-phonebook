@@ -12,10 +12,6 @@ const Layout = () => {
       <Header>
         <Container>
           <AppBar />
-          {/* <Nav>
-            <Link to="/">Home</Link>
-            <Link to="/contacts">Contacts</Link>
-          </Nav> */}
         </Container>
       </Header>
       <Container>

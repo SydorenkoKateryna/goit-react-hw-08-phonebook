@@ -1,40 +1,42 @@
-// import { useDispatch } from 'react-redux';
-// import { register } from 'redux/auth/operations';
-// import { Form, Label } from './RegisterForm.styled';
+import { useDispatch } from 'react-redux';
+import { signUp } from 'store/auth/operations';
+import { Form, Label } from './RegisterForm.styled';
 
 const RegisterForm = () => {
-//   const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-//   const handleSubmit = e => {
-//     e.preventDefault();
-//     const form = e.currentTarget;
-//     dispatch(
-//       register({
-//         name: form.elements.name.value,
-//         email: form.elements.email.value,
-//         password: form.elements.password.value,
-//       })
-//     );
-//     form.reset();
-//   };
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+
+    dispatch(
+      signUp({
+        name: form.elements.name.value,
+        email: form.elements.email.value,
+        password: form.elements.password.value,
+      })
+    );
+    
+    form.reset();
+  };
 
   return (
-    <h2>RegisterForm</h2>
-    // <Form onSubmit={handleSubmit} autoComplete="off">
-    //   <Label>
-    //     Username
-    //     <input type="text" name="name" />
-    //   </Label>
-    //   <Label>
-    //     Email
-    //     <input type="email" name="email" />
-    //   </Label>
-    //   <Label>
-    //     Password
-    //     <input type="password" name="password" />
-    //   </Label>
-    //   <button type="submit">Register</button>
-    // </Form>
+    <Form onSubmit={handleSubmit} autoComplete="off">
+      <Label>
+        Name
+        <input type="text" name="name" required />
+      </Label>
+      <Label>
+        Email
+        <input type="email" name="email" required />
+      </Label>
+      <Label>
+        Password
+        <input type="password" name="password" required />
+      </Label>
+      <button type="submit">Sign up</button>
+    </Form>
   );
 };
 

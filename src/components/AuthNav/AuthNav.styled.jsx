@@ -7,7 +7,7 @@ export const List = styled.ul`
 
   @media screen and (max-width: 767.98px) {
     flex-wrap: wrap;
-    max-width: 54px;
+    max-width: 50px;
   }
 `;
 

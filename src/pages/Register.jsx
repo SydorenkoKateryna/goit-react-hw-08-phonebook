@@ -2,10 +2,10 @@ import RegisterForm from 'components/RegisterForm';
 
 const Registration = () => {
   return (
-    <div>
-      <title>Registration</title>
+    <main>
+      <b>Create an account</b>
       <RegisterForm />
-    </div>
+    </main>
   );
 };
 
