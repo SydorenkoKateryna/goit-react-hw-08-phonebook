@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 import { selectContacts } from 'store/contacts/selectors';
 import { addContact } from 'store/contacts/operations';
 import { Form, Label, Input, Span, Button } from './ContactForm.styled';
@@ -28,7 +29,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     if (contacts.find(contact => contact.name === name)) {
-      alert(`${name} is already in contacts.`);
+      toast.info(`${name} is already in contact list.`);
       setName('');
       return;
     }
@@ -55,7 +56,7 @@ const ContactForm = () => {
       </Label>
 
       <Label>
-      <Span>Number</Span>
+        <Span>Number</Span>
         <Input
           type="tel"
           name="number"

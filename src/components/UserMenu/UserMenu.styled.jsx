@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
 
   @media screen and (max-width: 767.98px) {
     flex-direction: column;
-    align-items: flex-end;
     gap: 8px;
     max-width: 120px;
   }
@@ -21,6 +20,7 @@ export const Username = styled.p`
   line-height: 1.1666666667;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  text-align: center;
 
   color: #0c1421;
 

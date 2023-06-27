@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const FilterWrapper = styled.div`
-  /* padding-top: 24px;
-  padding-bottom: 24px; */
   width: 100%;
   margin-top: 16px;
   margin-bottom: 16px;

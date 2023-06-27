@@ -18,7 +18,7 @@ const Layout = () => {
         <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
-        <ToastContainer autoClose={3000} position="bottom-right" />
+        <ToastContainer autoClose={2000} position="bottom-right" />
       </Container>
     </>
   );
