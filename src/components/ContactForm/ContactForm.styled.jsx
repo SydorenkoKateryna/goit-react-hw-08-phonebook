@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-  margin-top: 24px;
+  margin-top: 16px;
 
   @media screen and (min-width: 768px) {
-    margin-top: 48px;
+    margin-top: 24px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 26px;
   }
 `;
 
@@ -17,6 +21,10 @@ export const Label = styled.label`
 
     @media screen and (min-width: 768px) {
       margin-top: 24px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-top: 26px;
     }
   }
 `;
@@ -91,6 +99,10 @@ export const Button = styled.button`
     margin-top: 24px;
 
     font-size: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 26px;
   }
 
   ${props => {

@@ -1,19 +1,31 @@
-import styled from 'styled-components';
+import {
+  Wrapper,
+  TitleWrapper,
+  Title,
+  AfterTitle,
+  TextLittle,
+  TextBig,
+  BackgroundImage,
+} from './Home.styled';
 
-const Title = styled.h1`
-  font-weight: 500;
-  font-size: 48;
-  text-align: center;
-`;
+import img from './home@1x.jpg';
 
 const Home = () => {
   return (
     <main>
-      <Title>Phonebook welcome page </Title>
-      
-      <p>communicate more worry less</p>
+      <Wrapper>
+        <TitleWrapper>
+          <Title>Phonebook</Title>
+          <AfterTitle>
+            <TextBig>communicate</TextBig>
+            <TextLittle>more</TextLittle>
+            <TextBig>worry</TextBig>
+            <TextLittle>less</TextLittle>
+          </AfterTitle>
+        </TitleWrapper>
 
-      <div>Background Image</div>
+        <BackgroundImage imgUrl={img}></BackgroundImage>
+      </Wrapper>
     </main>
   );
 };

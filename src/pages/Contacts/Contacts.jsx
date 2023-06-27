@@ -10,7 +10,9 @@ import {
   selectError,
 } from 'store/contacts/selectors';
 import Loader from 'components/Loader';
-import { FormWrapper, ContactListWrapper, Title } from './Contacts.styled';
+import { FormWrapper, ContactListWrapper } from './Contacts.styled';
+import { RiContactsBookFill } from 'react-icons/ri';
+import { BsPersonAdd } from 'react-icons/bs';
 
 const Contacts = () => {
   const dispatch = useDispatch();
@@ -25,7 +27,7 @@ const Contacts = () => {
   return (
     <main>
       <FormWrapper>
-        <Title>Add contact 🤗</Title>
+        <BsPersonAdd size={40} />
         <ContactForm />
       </FormWrapper>
 
@@ -34,8 +36,10 @@ const Contacts = () => {
 
         {!isLoading && !error && (
           <>
-            <Title>Contact list 📖</Title>
+            <RiContactsBookFill size={40} />
+
             <Filter />
+
             {contacts.length > 0 && <ContactList />}
           </>
         )}

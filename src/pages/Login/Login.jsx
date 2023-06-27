@@ -1,6 +1,7 @@
 import LoginForm from 'components/LoginForm';
 import {
   LoginWrapper,
+  TitleWrapper,
   Title,
   AfterTitle,
   LinkWrapper,
@@ -8,11 +9,16 @@ import {
   LinkStyled,
 } from './Login.styled';
 
+import { PiHandWavingFill } from 'react-icons/pi';
+
 const Login = () => {
   return (
     <main>
       <LoginWrapper>
-        <Title>Welcome Back 👋</Title>
+        <TitleWrapper>
+          <Title>Welcome Back</Title>
+          <PiHandWavingFill size={40} />
+        </TitleWrapper>
 
         <AfterTitle>
           Today is a new day. It's your day. You shape it. Log in to start

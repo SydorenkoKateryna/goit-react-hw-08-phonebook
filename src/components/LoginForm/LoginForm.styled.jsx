@@ -18,6 +18,10 @@ export const Label = styled.label`
     @media screen and (min-width: 768px) {
       margin-top: 24px;
     }
+
+    @media screen and (min-width: 1280px) {
+      margin-top: 26px;
+    }
   }
 `;
 
@@ -96,5 +100,9 @@ export const Button = styled.button`
     margin-top: 24px;
 
     font-size: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 26px;
   }
 `;

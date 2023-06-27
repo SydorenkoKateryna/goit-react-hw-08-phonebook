@@ -13,6 +13,12 @@ export const RegisterWrapper = styled.div`
     padding-bottom: 48px;
   }
 `;
+export const TitleWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+`;
 
 export const Title = styled.b`
   font-size: 24px;

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Item = styled.li`
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,43 +24,37 @@ export const Item = styled.li`
   }
 `;
 
-export const Name = styled.p``;
+export const Name = styled.p`
+  max-width: 220px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 280px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 320px;
+  }
+`;
 
 export const Number = styled.p`
   margin-top: 8px;
 `;
 
 export const Button = styled.button`
-  display: inline-flex;
-  min-width: 100px;
-  height: 30px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 16px;
+  padding: 0;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: inherit;
-  letter-spacing: inherit;
-
-  color: #ffffff;
-  background-color: #162d3a;
+  color: #162d3a;
+  background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 12px;
-  transition: background-color 250ms ease-in-out;
+  transition: color 250ms ease-in-out;
+
   cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: #0c1421;
-  }
-
-  @media screen and (min-width: 768px) {
-    min-width: 120px;
-    height: 40px;
-    margin-top: 24px;
-
-    font-size: 20px;
+    color: #0c1421;
   }
 `;

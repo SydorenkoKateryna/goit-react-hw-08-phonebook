@@ -45,10 +45,17 @@ export const Button = styled.button`
   text-transform: uppercase;
 
   color: #ffffff;
-  background-color: #0c1421;
+  background-color: #162d3a;
   border: 1px solid transparent;
   border-radius: 12px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: background-color 250ms ease-in-out;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #0c1421;
+  }
 
   @media screen and (min-width: 768px) {
     min-width: 120px;

@@ -23,11 +23,3 @@ export const ContactListWrapper = styled.section`
     padding-bottom: 48px;
   }
 `;
-
-export const Title = styled.h2`
-  font-size: 24px;
-
-  @media screen and (min-width: 768px) {
-    font-size: 36px;
-  }
-`;
