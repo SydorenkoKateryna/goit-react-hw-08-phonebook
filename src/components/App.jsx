@@ -9,8 +9,8 @@ import { selectIsRefreshing } from 'store/auth/selectors';
 import { refreshUser } from 'store/auth/operations';
 
 const HomePage = lazy(() => import('../pages/Home'));
-const RegisterPage = lazy(() => import('../pages/Register'));
-const LoginPage = lazy(() => import('../pages/Login'));
+const RegisterPage = lazy(() => import('../pages/Register/Register'));
+const LoginPage = lazy(() => import('../pages/Login/Login'));
 const ContactsPage = lazy(() => import('../pages/Contacts'));
 
 export const App = () => {

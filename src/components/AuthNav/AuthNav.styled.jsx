@@ -52,6 +52,6 @@ export const Link = styled(NavLink)`
   }
 
   &.active {
-    color: #e90418;
+    color: #1e4ae9;
   }
 `;

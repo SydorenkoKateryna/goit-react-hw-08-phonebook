@@ -1,0 +1,21 @@
+import styled from 'styled-components';
+
+export const RegisterWrapper = styled.div`
+  padding-top: 24px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 388px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 48px;
+  }
+`;
+
+export const Title = styled.b`
+  font-size: 24px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+  }
+`;

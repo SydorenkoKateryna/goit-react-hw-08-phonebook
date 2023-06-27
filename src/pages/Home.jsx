@@ -10,8 +10,10 @@ const Home = () => {
   return (
     <main>
       <Title>Phonebook welcome page </Title>
+
+      <div>Background Image</div>
     </main>
   );
-}
+};
 
 export default Home;
