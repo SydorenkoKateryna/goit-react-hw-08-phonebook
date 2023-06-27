@@ -12,10 +12,6 @@ const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
 };
 
-// POST
-// ​/users​/signup
-// Create a new user
-
 export const signUp = createAsyncThunk(
   'auth/signup',
   async (credentials, thunkAPI) => {
@@ -29,10 +25,6 @@ export const signUp = createAsyncThunk(
     }
   }
 );
-
-// POST
-// ​/users​/login
-// Login user
 
 export const logIn = createAsyncThunk(
   'auth/login',
@@ -48,10 +40,6 @@ export const logIn = createAsyncThunk(
   }
 );
 
-// POST
-// ​/users​/logout
-// Log out user
-
 export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     await axios.post('/users/logout');
@@ -61,10 +49,6 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     return thunkAPI.rejectWithValue(e.message);
   }
 });
-
-// GET
-// ​/users​/current
-// Get information about the current user
 
 export const refreshUser = createAsyncThunk(
   'auth/refresh',

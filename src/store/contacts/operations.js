@@ -19,7 +19,6 @@ export const addContact = createAsyncThunk(
   async ({ name, number }, thunkAPI) => {
     try {
       const response = await axios.post('/contacts', { name, number });
-      console.log(response.data.name);
       toast.success(
         `${response.data.name} has been successfully added to the contact list.`
       );
@@ -36,7 +35,6 @@ export const deleteContact = createAsyncThunk(
   async (contactId, thunkAPI) => {
     try {
       const response = await axios.delete(`/contacts/${contactId}`);
-      console.log(response.data.name);
       toast.success(
         `${response.data.name} has been successfully deleted from the contact list.`
       );
