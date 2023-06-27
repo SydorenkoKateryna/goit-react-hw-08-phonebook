@@ -8,25 +8,14 @@ export const List = styled.ul`
 export const Item = styled.li`
   & + & {
     margin-left: 50px;
+
+    @media screen and (max-width: 767.98px) {
+      margin-left: 16px;
+    }
   }
 `;
 
-// export const Nav = styled.nav`
-//   padding-top: 8px;
-//   padding-bottom: 8px;
-//   display: flex;
-//   align-items: center;
-// `;
-
 export const Link = styled(NavLink)`
-  /* padding: 8px 16px;
-  border-radius: 2px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 13px;
-  text-transform: uppercase;
-  color: inherit; */
-
   display: inline-flex;
   align-items: center;
   padding-top: 32px;

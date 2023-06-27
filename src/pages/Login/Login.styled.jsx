@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const LoginWrapper = styled.div`
   padding-top: 24px;
+  padding-bottom: 24px;
   width: 100%;
 
   @media screen and (min-width: 768px) {
@@ -10,6 +11,7 @@ export const LoginWrapper = styled.div`
     margin-left: auto;
     margin-right: auto;
     padding-top: 48px;
+    padding-bottom: 48px;
   }
 `;
 

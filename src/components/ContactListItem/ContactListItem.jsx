@@ -8,7 +8,7 @@ const ContactListItem = ({ name, number, id }) => {
 
   return (
     <Item>
-      <Name>{name}:</Name>
+      <Name>{name}</Name>
       <Number>{number}</Number>
       <Button type="button" onClick={() => dispatch(deleteContact(id))}>
         Delete

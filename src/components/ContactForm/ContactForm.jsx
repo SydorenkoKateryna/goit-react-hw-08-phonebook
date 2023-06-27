@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts } from 'store/contacts/selectors';
 import { addContact } from 'store/contacts/operations';
-import { Label, Input, Button } from './ContactForm.styled';
+import { Form, Label, Input, Span, Button } from './ContactForm.styled';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -40,9 +40,9 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <Label>
-        Name
+        <Span>Name</Span>
         <Input
           type="text"
           name="name"
@@ -55,7 +55,7 @@ const ContactForm = () => {
       </Label>
 
       <Label>
-        Number
+      <Span>Number</Span>
         <Input
           type="tel"
           name="number"
@@ -70,7 +70,7 @@ const ContactForm = () => {
       <Button type="submit" disabled={!name || !number}>
         Add contact
       </Button>
-    </form>
+    </Form>
   );
 };
 

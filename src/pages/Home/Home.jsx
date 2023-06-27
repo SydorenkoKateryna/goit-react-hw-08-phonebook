@@ -10,6 +10,8 @@ const Home = () => {
   return (
     <main>
       <Title>Phonebook welcome page </Title>
+      
+      <p>communicate more worry less</p>
 
       <div>Background Image</div>
     </main>

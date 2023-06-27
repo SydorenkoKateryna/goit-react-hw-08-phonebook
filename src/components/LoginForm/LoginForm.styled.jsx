@@ -71,6 +71,7 @@ export const Button = styled.button`
   align-items: center;
   margin-top: 16px;
 
+  font-family: inherit;
   font-size: 16px;
   font-weight: 500;
   line-height: inherit;

@@ -2,40 +2,63 @@ import styled from 'styled-components';
 
 export const Item = styled.li`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  
-  &:not(:last-child) {
-    margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d4d7e3;
+  border-radius: 8px;
+  box-shadow: 4px 8px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 24px) / 2);
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: calc((100% - 2 * 26px) / 3);
   }
 `;
 
-export const Name = styled.p`
-  width: 150px;
-`;
+export const Name = styled.p``;
 
 export const Number = styled.p`
-  width: 120px;
+  margin-top: 8px;
 `;
 
 export const Button = styled.button`
   display: inline-flex;
+  min-width: 100px;
+  height: 30px;
   justify-content: center;
   align-items: center;
-  min-width: 70px;
-  height: 20px;
+  margin-top: 16px;
 
-  font-weight: 700;
-  border: 1px solid #000000;
-  border-radius: 5px;
-  background-color: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: inherit;
+  letter-spacing: inherit;
+
+  color: #ffffff;
+  background-color: #162d3a;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  transition: background-color 250ms ease-in-out;
   cursor: pointer;
 
-  &:hover {
-    background-color: rgb(60, 60, 253);
-    border-color: rgb(60, 60, 253);
+  &:hover,
+  &:focus {
+    background-color: #0c1421;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-width: 120px;
+    height: 40px;
+    margin-top: 24px;
+
+    font-size: 20px;
   }
 `;

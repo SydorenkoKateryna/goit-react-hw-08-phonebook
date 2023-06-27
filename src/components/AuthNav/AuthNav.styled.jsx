@@ -25,14 +25,6 @@ export const Item = styled.li`
 `;
 
 export const Link = styled(NavLink)`
-  /* padding: 8px 16px;
-  border-radius: 2px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 13px;
-  text-transform: uppercase;
-  color: inherit; */
-
   display: inline-flex;
   align-items: center;
   padding-top: 32px;
