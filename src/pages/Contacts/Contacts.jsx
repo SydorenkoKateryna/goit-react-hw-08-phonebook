@@ -1,7 +1,7 @@
 import ContactForm from 'components/ContactForm';
 import Filter from 'components/Filter';
 import ContactList from 'components/ContactList';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'store/contacts/operations';
 import {
@@ -10,9 +10,13 @@ import {
   selectError,
 } from 'store/contacts/selectors';
 import Loader from 'components/Loader';
-import { FormWrapper, ContactListWrapper } from './Contacts.styled';
-import { RiContactsBookFill } from 'react-icons/ri';
+import {
+  AddNewContactWrapper,
+  ContactListWrapper,
+  Button,
+} from './Contacts.styled';
 import { BsPersonAdd } from 'react-icons/bs';
+import Modal from 'components/Modal';
 
 const Contacts = () => {
   const dispatch = useDispatch();
@@ -20,26 +24,36 @@ const Contacts = () => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 
+  const [isShowModal, setIsShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setIsShowModal(prevState => !prevState);
+  };
+
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
   return (
     <main>
-      <FormWrapper>
-        <BsPersonAdd size={40} />
-        <ContactForm />
-      </FormWrapper>
+      <AddNewContactWrapper>
+        <Button onClick={toggleModal}>
+          <BsPersonAdd size={40} />
+        </Button>
+      </AddNewContactWrapper>
+
+      {isShowModal && (
+        <Modal onClose={toggleModal}>
+          <ContactForm onClose={toggleModal} />
+        </Modal>
+      )}
 
       <ContactListWrapper>
         {isLoading && !error && <Loader />}
 
         {!isLoading && !error && (
           <>
-            <RiContactsBookFill size={40} />
-
             <Filter />
-
             {contacts.length > 0 && <ContactList />}
           </>
         )}

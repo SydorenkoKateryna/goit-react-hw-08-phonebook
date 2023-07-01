@@ -16,7 +16,7 @@ const Login = () => {
     <main>
       <LoginWrapper>
         <TitleWrapper>
-          <Title>Welcome Back</Title>
+          <Title>Welcome back</Title>
           <PiHandWavingFill size={40} />
         </TitleWrapper>
 

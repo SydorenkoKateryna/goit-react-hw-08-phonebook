@@ -1,16 +1,6 @@
 import styled from 'styled-components';
 
-export const Form = styled.form`
-  margin-top: 16px;
-
-  @media screen and (min-width: 768px) {
-    margin-top: 24px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    margin-top: 26px;
-  }
-`;
+export const Form = styled.form``;
 
 export const Label = styled.label`
   display: flex;

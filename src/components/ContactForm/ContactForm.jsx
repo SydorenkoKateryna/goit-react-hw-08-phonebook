@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import { selectContacts } from 'store/contacts/selectors';
 import { addContact } from 'store/contacts/operations';
 import { Form, Label, Input, Span, Button } from './ContactForm.styled';
 
-const ContactForm = () => {
+const ContactForm = ({ onClose }) => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
 
@@ -38,6 +39,8 @@ const ContactForm = () => {
 
     setName('');
     setNumber('');
+
+    onClose();
   };
 
   return (
@@ -73,6 +76,10 @@ const ContactForm = () => {
       </Button>
     </Form>
   );
+};
+
+ContactForm.propTypes = {
+  onClose: PropTypes.func.isRequired,
 };
 
 export default ContactForm;

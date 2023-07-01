@@ -2,19 +2,16 @@ import styled from 'styled-components';
 
 export const FilterWrapper = styled.div`
   width: 100%;
-  margin-top: 16px;
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
     width: 340px;
-    margin-top: 24px;
     margin-bottom: 24px;
     margin-right: auto;
   }
 
   @media screen and (min-width: 1280px) {
     width: 388px;
-    margin-top: 26px;
     margin-bottom: 26px;
   }
 `;
