@@ -80,7 +80,7 @@ export const Button = styled.button`
   border: 1px solid transparent;
   border-radius: 12px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: background-color 250ms ease-in-out;
+  transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
   cursor: pointer;
 
   @media screen and (min-width: 768px) {
@@ -99,6 +99,7 @@ export const Button = styled.button`
     if (!props.disabled) {
       return `&:hover {
         background-color: #0c1421;
+        transform: scale(1.01);
   }`;
     }
   }}
